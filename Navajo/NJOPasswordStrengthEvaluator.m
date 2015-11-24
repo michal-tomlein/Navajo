@@ -376,7 +376,7 @@ static inline __attribute__((const)) NJOPasswordStrength NJOPasswordStrengthForE
 @implementation NJOBlockRule
 
 + (instancetype)ruleWithBlock:(BOOL (^)(NSString *password))block {
-    NJOBlockRule *rule = [[NJOBlockRule alloc] init];
+    NJOBlockRule *rule = [[self alloc] init];
     rule.evaluation = block;
 
     return rule;
